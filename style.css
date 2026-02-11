@@ -16,12 +16,11 @@ h1 {
     font-size: 96px;
     text-transform: uppercase;
     font-weight: bold;
-    position: absolute;
-    top: 0;
-    margin-top: 320px;
     width: 100%;
     text-align: center;
     bottom: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 h2 {
@@ -46,6 +45,23 @@ h3 {
 
 }
 
+
+header img {
+    width: 64px;
+    height: 64px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+
+
 td {
     font-family: "Raleway", sans-serif;
     font-weight: bold;
@@ -58,16 +74,13 @@ td {
 nav {
     font-family: "Raleway", sans-serif;
     font-size: 24px;
-    height: 112px;
-    top: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     color: white;
-    max-width: 1440px;               
-    margin: 0 auto;                  
     font-size: 24px;
-    position: relative;
+    width: 100%;
+    text-transform: uppercase;
 }
 
 .container {
@@ -85,10 +98,9 @@ nav {
 
 .nav-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     text-transform: uppercase;
-    margin-right: 160px;
 }
 
 .nav-links {
@@ -132,10 +144,8 @@ nav {
     transform: scale(1.15);
 }
 
-.logo {
-    width: 64px;
-    height: 64px;
-    margin-left: 160px;
+.headline{
+    margin-top: 250px;
 }
 
 .slogan {
@@ -144,8 +154,6 @@ nav {
     font-size: 24px;
     text-transform: uppercase;
     position: absolute;
-    top: 0;
-    margin-top: 440px;
     width: 100%;
     text-align: center;  
 }
@@ -305,4 +313,95 @@ footer {
 
 #our-menu-h2 {
     padding-top: 120px;
+}
+
+
+@media(max-width:1280px){
+    .hide-mobile {
+        display:none;
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+
+    .slogan {
+        font-size: 20px;
+    }
+
+    .header-top {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    nav {
+        font-size: 20px;
+    }
+
+    .nav-btn {
+        height: 22px;
+        width: 180px;
+        padding: 10px;
+    }
+
+}
+
+
+@media(max-width:762px){
+    .hide-mobile {
+        display:none;
+    }
+
+    .header-top {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    nav {
+        font-size: 16px;
+    }
+
+    .nav-btn {
+        height: 20px;
+        width: 150px;
+        padding: 10px;
+    }
+
+}
+
+@media(max-width:400px){
+    .hide-mobile {
+        display:none;
+    }
+
+    .header-top {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    nav {
+        font-size: 16px;
+    }
+
+    .nav-btn {
+        height: 20px;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .nav-links {
+        margin-left: 0;
+    }
 }
