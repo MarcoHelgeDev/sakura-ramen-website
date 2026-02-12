@@ -386,11 +386,11 @@ footer {
   }
 
   .our-menu-pic-right {
-    margin-left: 24px;
+    margin-right: 0;
   }
 
   .our-menu-pic {
-    margin-right: 24px;
+    margin-left: 0;
   }
 
   .adress {
