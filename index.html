@@ -15,69 +15,60 @@
   </head>
   <body>
     <header class="container-header">
-      <nav>
-        <div>
-          <img
-            class="logo"
-            src="./img/sakura_logo.png"
-            alt="Sakura logo showing a cherry blossom"
-          />
-        </div>
-        <div class="nav-container">
-          <a href="#menu" class="nav-links">Menu</a>
-          <a href="#locations" class="nav-links">Locations</a>
-          <a class="nav-links">About</a>
+      <div class="header-top">
+        <img
+          src="./img/sakura_logo.png"
+          alt="Sakura logo showing a cherry blossom"
+        />
+        <nav>
+          <a href="#menu" class="nav-links hide-mobile">Menu</a>
+          <a href="#locations" class="nav-links hide-mobile">Locations</a>
+          <a class="nav-links hide-mobile">About</a>
           <a href="tel:0176 54564534" class="nav-links nav-btn">
             <img class="tele-symb" src="./img/phone.png" alt="Phone icon" />
             0176 54564534
           </a>
-        </div>
-      </nav>
-      <h1>Sakura Ramen</h1>
-      <span class="slogan">The Best Ramen In Town</span>
+        </nav>
+      </div>
+      <div class="headline">
+        <h1>Sakura Ramen</h1>
+        <span class="slogan">The Best Ramen In Town</span>
+      </div>
     </header>
+
     <main>
       <div class="container">
+        <h2>How to Order</h2>
         <section class="how-to-order-section">
-          <h2>How to Order</h2>
           <div class="how-to-order-layout">
             <div>
-              <div>
-                <img
-                  class="how-to-order-icons"
-                  src="./img/noodle.png"
-                  alt="Bowl of noodles"
-                />
+              <div class="how-to-order-icons">
+                <img src="./img/noodle.png" alt="Bowl of noodles" />
               </div>
               <div class="how-to-order-txt">Pick your <br />noodle</div>
             </div>
             <div>
-              <div>
-                <img
-                  class="how-to-order-icons"
-                  src="./img/broth.png"
-                  alt="Bowl of broth"
-                />
+              <div class="how-to-order-icons">
+                <img src="./img/broth.png" alt="Bowl of broth" />
               </div>
               <div class="how-to-order-txt">Pick your <br />broth</div>
             </div>
             <div>
-              <div>
-                <img
-                  class="how-to-order-icons"
-                  src="./img/egg.png"
-                  alt="Two boiled eggs"
-                />
+              <div class="how-to-order-icons">
+                <img src="./img/egg.png" alt="Two boiled eggs" />
               </div>
-              <div class="how-to-order-txt">Add your <br />toppings</div>
+              <div id="mb-0" class="how-to-order-txt">
+                Add your <br />toppings
+              </div>
             </div>
           </div>
         </section>
       </div>
+
       <div class="our-menu-background-img">
+        <h2 id="h2-our-menu">Our Menu</h2>
         <div class="container">
           <section id="menu" class="our-menu-section">
-            <h2 id="our-menu-h2">Our Menu</h2>
             <div class="our-menu-layout">
               <div class="our-menu-element">
                 <img
@@ -85,14 +76,16 @@
                   src="./img/R1.png"
                   alt="Tonkotsu ramen bowl"
                 />
-                <div class="our-menu-tbl">
-                  <h3>Tonkotsu Ramen</h3>
                   <table>
                     <tr>
-                      <td class="tbl-format">Chicken</td>
-                      <td>11.95€</td>
+                      <th colspan="2">Tonkotsu Ramen</th>
                     </tr>
                     <tr>
+                       <td>Chicken</td>
+                      <td>11.95€</td>
+                    </tr>
+                    </tr>
+                     <tr>
                       <td>Beef</td>
                       <td>12.95€</td>
                     </tr>
@@ -101,17 +94,22 @@
                       <td>13.95€</td>
                     </tr>
                   </table>
-                </div>
               </div>
               <div class="our-menu-element-right">
-                <div class="our-menu-tbl">
-                  <h3>Spicy Miso Ramen</h3>
-                  <table>
+                     <img
+                  class="our-menu-pic-right"
+                  src="./img/R2.png"
+                  alt="Tonkotsu ramen bowl"
+                />                  <table>
                     <tr>
-                      <td class="tbl-format">Chicken</td>
-                      <td>11.95€</td>
+                      <th colspan="2">Spicy Miso Ramen</th>
                     </tr>
                     <tr>
+                       <td>Chicken</td>
+                      <td>11.95€</td>
+                    </tr>
+                    </tr>
+                     <tr>
                       <td>Beef</td>
                       <td>12.95€</td>
                     </tr>
@@ -120,27 +118,24 @@
                       <td>13.95€</td>
                     </tr>
                   </table>
-                </div>
-                <img
-                  class="our-menu-pic-right"
-                  src="./img/R2.png"
-                  alt="Spicy miso ramen bowl"
-                />
+             
               </div>
-              <div class="our-menu-element-last">
+              <div id="our-menu-pb"class="our-menu-element">
                 <img
                   class="our-menu-pic"
                   src="./img/R3.png"
-                  alt="Shio ramen bowl"
+                  alt="Tonkotsu ramen bowl"
                 />
-                <div class="our-menu-tbl">
-                  <h3>Shio Ramen</h3>
                   <table>
                     <tr>
-                      <td class="tbl-format">Chicken</td>
-                      <td>11.95€</td>
+                      <th colspan="2">Shio Ramen</th>
                     </tr>
                     <tr>
+                       <td>Chicken</td>
+                      <td>11.95€</td>
+                    </tr>
+                    </tr>
+                     <tr>
                       <td>Beef</td>
                       <td>12.95€</td>
                     </tr>
@@ -149,17 +144,16 @@
                       <td>13.95€</td>
                     </tr>
                   </table>
-                </div>
               </div>
             </div>
           </section>
         </div>
       </div>
       <section>
-        <div  id="locations" class="container">
+        <div id="locations" class="container">
           <div class="find-us-section">
             <div id="find-us-h2">
-              <h2>Find us at</h2>
+              <h2 id="find-us-h2">Find us at</h2>
             </div>
             <div class="adress">
               <img
@@ -184,10 +178,17 @@
       <div class="footer-container">
         <div class="logo-txt-container">
           <img
-            class="logo-w-txt"
+            class="logo-w-txt hide-mobile"
             src="./img/sakura_ramen_logo_and_text.png"
             alt="Sakura logo showing a cherry blossom"
           />
+
+          <img
+            class="logo-w-txt hide-desktop"
+            src="./img/sakura_logo.png"
+            alt="Sakura logo showing a cherry blossom"
+          />
+
         </div>
         <div class="logo-socialmedia-container">
           <a href="https://www.tripadvisor.com/" target="_blank">
