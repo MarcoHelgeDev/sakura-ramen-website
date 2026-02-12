@@ -18,7 +18,6 @@ h1 {
   font-weight: bold;
   width: 100%;
   text-align: center;
-  bottom: 0;
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -36,13 +35,40 @@ h2 {
   margin-bottom: 64px;
 }
 
-h3 {
+th {
   font-family: "Economica", sans-serif;
   font-size: 56px;
   font-weight: bold;
   padding: 0;
   margin: 0;
-  margin-bottom: 16px;
+  padding-bottom: 16px;
+  text-align: left;
+}
+
+td {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 32px;
+  color: #675e54;
+  padding-bottom: 8px;
+}
+
+td:last-child {
+  padding-left: clamp(24px, 5vw, 320px);
+}
+
+.container {
+  max-width: 1440px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.container-header {
+  background-image: url("./img/hero_bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-position: bottom;
 }
 
 header img {
@@ -59,13 +85,8 @@ header img {
   padding-right: 160px;
 }
 
-td {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 32px;
-  color: #675e54;
-  padding-bottom: 8px;
+.headline {
+  margin-top: 150px;
 }
 
 nav {
@@ -75,29 +96,14 @@ nav {
   justify-content: flex-end;
   align-items: center;
   color: white;
-  font-size: 24px;
   width: 100%;
   text-transform: uppercase;
-}
-
-.container {
-  max-width: 1440px;
-  position: relative;
-  margin: 0 auto;
-}
-
-.container-header {
-  background-image: url("./img/hero_bg.jpg");
-  background-size: cover;
-  height: 100vh;
-  background-position: bottom;
 }
 
 .nav-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  text-transform: uppercase;
 }
 
 .nav-links {
@@ -108,11 +114,6 @@ nav {
 }
 
 .nav-links:hover {
-  transform: scale(1.15);
-  font-weight: bold;
-}
-
-.nav-btn:hover {
   transform: scale(1.15);
   font-weight: bold;
 }
@@ -130,6 +131,11 @@ nav {
   transform-origin: center;
 }
 
+.nav-btn:hover {
+  transform: scale(1.15);
+  font-weight: bold;
+}
+
 .tele-symb {
   width: 24px;
   height: 24px;
@@ -138,20 +144,6 @@ nav {
 
 .nav-btn:hover .tele-symb {
   transform: scale(1.15);
-}
-
-.headline {
-  margin-top: 250px;
-}
-
-.slogan {
-  color: white;
-  font-family: "Raleway", sans-serif;
-  font-size: 24px;
-  text-transform: uppercase;
-  position: absolute;
-  width: 100%;
-  text-align: center;
 }
 
 .how-to-order-section {
@@ -164,12 +156,9 @@ nav {
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-#mb-0 {
-  margin-bottom: 0;
-}
 .how-to-order-icons {
   display: flex;
   justify-content: center;
@@ -178,6 +167,16 @@ nav {
 .how-to-order-icons img {
   width: 128px;
   margin-bottom: 16px;
+}
+
+.slogan {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  text-align: center;
 }
 
 .how-to-order-txt {
@@ -194,8 +193,6 @@ nav {
 
 .our-menu-section {
   margin-bottom: 120px;
-  margin-left: 160px;
-  margin-right: 160px;
 }
 
 .our-menu-layout {
@@ -203,43 +200,30 @@ nav {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: column;
   margin-bottom: 120px;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
-.our-menu-element {
-  margin-right: 80px;
+.our-menu-element,
+.our-menu-element-right {
   display: flex;
-  justify-content: flex-start;
-  margin-bottom: 54px;
   align-items: center;
+  gap: 80px;
+  width: 100%;
 }
 
 .our-menu-element-right {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 54px;
-  align-items: center;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  flex-direction: row-reverse;
 }
 
-.our-menu-element-last {
-  display: flex;
-  justify-content: flex-start;
-  padding-bottom: 120px;
-  align-items: center;
-}
-
-.our-menu-pic {
-  width: 352px;
-  height: 352px;
-  margin-right: 80px;
-}
-
+.our-menu-pic,
 .our-menu-pic-right {
   width: 352px;
   height: 352px;
-  margin-left: 80px;
 }
 
 .tbl-format {
@@ -308,6 +292,18 @@ footer {
   margin-right: 160px;
 }
 
+.hide-desktop {
+  display: none;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+#mb-0 {
+  margin-bottom: 0;
+}
+
 #find-us-h2 h2 {
   margin-bottom: 0;
   padding-bottom: 8px;
@@ -317,11 +313,11 @@ footer {
   padding-top: 120px;
 }
 
-@media (max-width: 1280px) {
-  .hide-mobile {
-    display: none;
-  }
+#our-menu-pb {
+  margin-bottom: 120px;
+}
 
+@media (max-width: 1280px) {
   h1 {
     font-size: 72px;
   }
@@ -332,25 +328,12 @@ footer {
     margin-bottom: 48px;
   }
 
-  #h2-our-menu {
-    padding-top: 96px;
-  }
-
-  .how-to-order-section {
-    margin-bottom: 96px;
-  }
-
-  .how-to-order-icons img {
-    width: 112px;
-    margin-bottom: 8px;
-  }
-
-  .how-to-order-txt {
+  th {
     font-size: 32px;
   }
 
-  .slogan {
-    font-size: 20px;
+  td {
+    font-size: 24px;
   }
 
   .header-top {
@@ -367,13 +350,88 @@ footer {
     width: 180px;
     padding: 10px;
   }
-}
 
-@media (max-width: 762px) {
-  .hide-mobile {
+  .how-to-order-section {
+    margin-bottom: 96px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .how-to-order-icons img {
+    width: 112px;
+    margin-bottom: 8px;
+  }
+
+  .how-to-order-txt {
+    font-size: 32px;
+  }
+
+  .our-menu-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .our-menu-element-right {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .our-menu-element,
+  .our-menu-element-right {
+    gap: 24px;
+  }
+
+  .our-menu-pic-right {
+    margin-left: 24px;
+  }
+
+  .our-menu-pic {
+    margin-right: 24px;
+  }
+
+  .adress {
+    margin-bottom: 48px;
+    font-size: 20px;
+  }
+
+  .slogan {
+    font-size: 20px;
+  }
+
+  .logo-txt-container {
+    margin-left: 24px;
+  }
+
+  .logo-socialmedia-container {
+    margin-right: 24px;
+  }
+
+  .hide-desktop {
     display: none;
   }
 
+  #h2-our-menu {
+    padding-top: 96px;
+  }
+
+  #our-menu-pb {
+    margin-bottom: 96px;
+  }
+}
+
+@media (max-width: 762px) {
+  .adress {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  footer {
+    height: 86px;
+  }
+  .find-us-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .header-top {
     padding-left: 24px;
     padding-right: 24px;
@@ -389,8 +447,36 @@ footer {
     margin-bottom: 48px;
   }
 
-  #h2-our-menu {
-    padding-top: 72px;
+  th {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  table {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+
+  table td,
+  table th {
+    text-align: left;
+    padding: 8px 12px;
+  }
+
+  td:last-child {
+    text-align: right;
+  }
+
+  nav {
+    font-size: 16px;
+  }
+
+  .nav-btn {
+    height: 20px;
+    width: 150px;
+    padding: 10px;
   }
 
   .how-to-order-layout {
@@ -405,18 +491,80 @@ footer {
     margin-bottom: 72px;
   }
 
+  .our-menu-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .our-menu-section {
+    margin-bottom: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .our-menu-element,
+  .our-menu-element-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+    gap: 24px;
+  }
+
+  .our-menu-element {
+    margin-bottom: 0;
+  }
+
+  .our-menu-section {
+    padding: 0;
+  }
+
+  .our-menu-pic,
+  .our-menu-pic-right {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: 0;
+  }
+
   .slogan {
     font-size: 16px;
   }
 
-  nav {
-    font-size: 16px;
+  .logo-txt-container {
+    margin-left: 16px;
   }
 
-  .nav-btn {
-    height: 20px;
-    width: 150px;
-    padding: 10px;
+  .logo-socialmedia-container {
+    margin-right: 16px;
+  }
+
+  .logo-footer {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-w-txt {
+    height: 40px;
+    width: auto;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .hide-desktop {
+    display: block;
+  }
+
+  #h2-our-menu {
+    padding-top: 72px;
+  }
+
+  #our-menu-pb {
+    margin-bottom: 72px;
   }
 }
 
@@ -456,5 +604,9 @@ footer {
 @media (max-width: 335px) {
   .hide-mobile {
     display: none;
+  }
+  .adress {
+    margin-bottom: 40px;
+    font-size: 14px;
   }
 }
